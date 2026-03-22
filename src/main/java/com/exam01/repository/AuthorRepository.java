@@ -20,24 +20,7 @@ public class AuthorRepository {
         return authors;
     }
 
-    public Author findById(int id){
-        for (Author author : authors) {
-            if (author.getId() == id) {
-                return author;
-            }
-        }
-        return null ;
+    public void save(Author author) {
+        authors.add(author);
     }
-
-    public Author update(Author author){
-        for (Author auth : authors) {
-            if (auth.getId() == author.getId()) {
-                auth.setName(author.getName());
-                auth.setEmail(author.getEmail());
-                return auth ;
-            }
-        }
-        return null ;
-    }
-
 }

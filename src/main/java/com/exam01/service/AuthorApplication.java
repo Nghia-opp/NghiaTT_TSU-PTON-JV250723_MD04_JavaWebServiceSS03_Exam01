@@ -14,6 +14,11 @@ public class AuthorApplication {
         this.authorRepository = authorRepository;
     }
 
+    public Author createAuthor(Author author) {
+        authorRepository.save(author);
+        return author;
+    }
+
     public List<Author> getAllAuthors() {
         return authorRepository.findAll();
     }
